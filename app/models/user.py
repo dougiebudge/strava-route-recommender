@@ -12,7 +12,7 @@ class User(Base):
     strava_refresh_token = Column(String, nullable=True)
 
     # derived fields
-    avg_distance_km = Coulmn(Float, nullable=True)
+    avg_distance_km = Column(Float, nullable=True)
     avg_elevation_m = Column(Float, nullable=True)
     preffered_pace_min_km = Column(Float, nullable=True)
 
