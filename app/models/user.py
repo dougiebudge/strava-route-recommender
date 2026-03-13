@@ -10,7 +10,7 @@ class User(Base):
     strava_athlete_id = Column(Integer, unique=True, nullable=True)
     strava_access_token = Column(String, nullable=True)
     strava_refresh_token = Column(String, nullable=True)
-    stava_token_expires_at = Column(Integer, nullable=True) # Unix timestamp
+    strava_token_expires_at = Column(Integer, nullable=True) # Unix timestamp
 
     # derived fields
     avg_distance_km = Column(Float, nullable=True)

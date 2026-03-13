@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from app.models.database import engine, Base
-from app.routers import auth
+from app.routers import auth, strava
 
 Base.metadata.create_all(bind=engine)
 
@@ -11,6 +11,7 @@ app = FastAPI(
 )
 
 app.include_router(auth.router)
+app.include_router(strava.router)
 
 @app.get("/health")
 def health_check():

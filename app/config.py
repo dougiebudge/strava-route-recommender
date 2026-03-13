@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     secret_key: str = ""
     strava_client_id: str = ""
     strava_client_secret: str = ""
-    strava_redirect_uri: str = "http://localhost:8000/auth/strava/callback"
+    strava_redirect_uri: str = "http://localhost:8000/strava/callback"
 
     class Config:
         env_file = ".env"
