@@ -1,10 +1,11 @@
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    database_url: str = "postgresql://strava_user:localdev123@localhost:5433/strava_routes"
-    secret_key: str = "dev-secret-change-in-production"
+    database_url: str = ""
+    secret_key: str = ""
     strava_client_id: str = ""
     strava_client_secret: str = ""
+    strava_redirect_uri: str = "http://localhost:8000/auth/strava/callback"
 
     class Config:
         env_file = ".env"
